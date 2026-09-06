@@ -421,11 +421,11 @@
     var pastPeak = Math.max(a, b, c);
     var dropNow = pastPeak - d;
 
-    if (avg <= -1) {
-      return PATTERNS.endurance;
-    }
     if (dip <= -1 && riseAfterDip >= 2) {
       return PATTERNS.resilience;
+    }
+    if (avg <= -1) {
+      return PATTERNS.endurance;
     }
     if (range <= 1) {
       return PATTERNS.steady;

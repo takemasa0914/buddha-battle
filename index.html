@@ -362,11 +362,11 @@
   ];
 
   var MOODS = [
-    { value: -2, emoji: '⛈️', label: 'とても\n大変だった' },
-    { value: -1, emoji: '☁️', label: '少し\n苦しかった' },
-    { value: 0,  emoji: '☀️', label: '平穏\nだった' },
-    { value: 1,  emoji: '🌤️', label: '充実して\nいた' },
-    { value: 2,  emoji: '🌈', label: '大変だったが\n輝いていた' }
+    { value: -2, emoji: '⛈️', label: 'とても\n大変', full: 'とても大変だった' },
+    { value: -1, emoji: '☁️', label: '少し\n苦しい', full: '少し苦しかった' },
+    { value: 0,  emoji: '☀️', label: '平穏', full: '平穏だった' },
+    { value: 1,  emoji: '🌤️', label: '充実', full: '充実していた' },
+    { value: 2,  emoji: '🌈', label: '輝いて\nいた', full: '大変だったが輝いていた' }
   ];
 
   var scores = { a: null, b: null, c: null, d: null };
@@ -486,7 +486,7 @@
         var btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'mood-btn';
-        btn.setAttribute('aria-label', mood.label.replace('\n','') + ' を選択');
+        btn.setAttribute('aria-label', mood.full + ' を選択');
         btn.innerHTML = '<span>' + mood.emoji + '</span><span class="mood-label">' + mood.label.replace('\n','<br>') + '</span>';
         btn.addEventListener('click', function(){
           scores[stage.key] = mood.value;

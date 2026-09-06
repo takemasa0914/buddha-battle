@@ -29,10 +29,17 @@ open index.html   # macOS
 python3 -m http.server 8000  # http://localhost:8000/ にアクセス
 ```
 
+## デプロイ（Vercel）
+
+本番URL: https://digital-jinsei-emaki-masafumitakeda394-2929s-projects.vercel.app
+
+公民館講座など参加者への案内用に、QRコード付きの案内ページ（`qr.html`）を用意しています。
+プロジェクターに映す、または印刷してレジュメに載せるなどしてお使いください。
+
 ## デプロイ（GitHub Pages）
 
 `main` ブランチへの push をトリガーに `.github/workflows/deploy-pages.yml` が
-GitHub Actions 経由で GitHub Pages へ自動デプロイします。
+GitHub Actions 経由で GitHub Pages へ自動デプロイします（任意。上記Vercelと並行利用可）。
 
 初回のみ、リポジトリの **Settings → Pages → Build and deployment → Source** を
 「GitHub Actions」に設定してください（一度設定すれば以降は自動でデプロイされます）。
